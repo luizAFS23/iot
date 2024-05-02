@@ -1,0 +1,49 @@
+body{
+    margin: 0;
+}
+
+.pagina-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.logo-empresa{
+    font-size: xx-large;
+    margin-bottom: 30px;
+    background-color: rgb(72, 72, 168);
+    font-style: italic;
+    color: aliceblue;
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.logo-empresa-button{
+}
+
+.lista-container{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.header-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.tabela, .tabela th, .tabela td{
+    border-collapse: collapse;
+    border: 2px solid black;
+}
+
+.esmalte, .batom, .laço, .delineador{
+    background-color: greenyellow;
+}
+
+.saia, .sombreado, .vestido{
+    background-color: red;
+}
