@@ -37,9 +37,7 @@ body{
 }
 
 .lista-produtos{
-    float: left;
-    position: relative;
-    left: 45%;
+    text-align: center;
 }
 
 .header-container{
@@ -54,6 +52,8 @@ body{
 .tabela, .tabela th, .tabela td{
     border-collapse: collapse;
     border: 2px solid black;
+    margin: 0;
+    padding: 10px;
 }
 
 .esmalte, .batom, .laço, .delineador{
