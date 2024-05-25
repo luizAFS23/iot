@@ -1,5 +1,19 @@
 body{
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url(imgs/pexels-mikhail-nilov-6835879.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.header-container{
+    display: flex;
+    justify-content: space-around;
+    background-color: #FFF;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8);
 }
 
 .pagina-container{
@@ -9,10 +23,10 @@ body{
     flex-direction: column;
 }
 
+
 .logo-empresa{
     font-size: xx-large;
-    margin-bottom: 30px;
-    background-color: rgb(72, 72, 168);
+    background-color: #000000;
     font-style: italic;
     color: aliceblue;
     padding: 20px;
@@ -30,20 +44,19 @@ body{
 }
 
 .lista-container{
-    margin-top: 50px;
-    display: flex;
+    margin: 60px auto 0;
     flex-direction: column;
     justify-content: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8);
 }
 
 .lista-produtos{
     text-align: center;
 }
 
-.header-container{
-    display: flex;
-    justify-content: space-around;
-}
 
 .receita-mensal-button, .receita-vs-despesas-button, .despesa-mensal-button{
     padding: 5px;
@@ -53,7 +66,23 @@ body{
     border-collapse: collapse;
     border: 2px solid black;
     margin: 0;
-    padding: 10px;
+    text-align: center;
+}
+
+.tabela th, .tabela td{
+    height: 35px;
+    width: 150px;
+}
+
+.tabela .icon{
+    width: 50px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #000000;
+    transition: .6s;
+}
+.tabela .icon:hover{
+    color: rgb(255, 49, 49);
 }
 
 .esmalte, .batom, .laço, .delineador{
@@ -63,3 +92,18 @@ body{
 .saia, .sombreado, .vestido{
     background-color: red;
 }
+
+button {
+    background-color: #8a2be2; /* roxo médio */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #6a1b9a; /* roxo mais escuro no hover */
+  }
