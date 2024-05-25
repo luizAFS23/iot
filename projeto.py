@@ -8,6 +8,7 @@ connect.execute(
     'CREATE TABLE IF NOT EXISTS PRODUTOS (nome_produto TEXT,\
       valor_produto NUMBER, tipo_despesa TEXT, categoria TEXT, saldo TEXT)')
 
+
 @app.route('/adicionar_produto', methods=['GET', 'POST']) 
 def adicionar_produto(): 
     if request.method == 'POST': 
@@ -23,7 +24,8 @@ def adicionar_produto():
             (nome_produto, valor_produto, tipo_despesa, categoria, saldo) VALUES (?,?,?,?,?)", 
                            (nome_produto, valor_produto, tipo_despesa, categoria, saldo)) 
             users.commit() 
-        return redirect(url_for('index'))
+        return redirect(url_for('home'))
+    return render_template('adicionar_produto.html')
     
 
 @app.route('/remover_produto', methods=['GET', 'POST'])
@@ -43,6 +45,7 @@ def remover_produto():
   
     data = cursor.fetchall() 
     return render_template('remover_produto.html', data=data)
+
     
 
 @app.route("/")
@@ -50,8 +53,7 @@ def home():
     connect = sqlite3.connect('database.db') 
     cursor = connect.cursor() 
     cursor.execute('SELECT * FROM PRODUTOS') 
-  
-    data = cursor.fetchall() 
+    data = cursor.fetchall()
     return render_template("index.html", data=data)
     
     
