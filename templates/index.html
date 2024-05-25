@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Inicial</title>
     <link rel="stylesheet" href="{{ url_for('static',     filename='css/template.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div class="main-container">
@@ -18,7 +19,7 @@
             </div>
 
             <div class="lista-container">
-                <h2 class="lista-produtos">Lista de Produtos</h2>
+                <h2 class="lista-produtos">LISTA DE PRODUTOS</h2>
                 <table class="tabela" style="border: none;">
                     <tr>
                       <th>Descrição</th>
@@ -34,7 +35,7 @@
                         <td>{{produto[2]}}</td>
                         <td>{{produto[3]}}</td>
                         <td>{{produto[4]}}</td>
-                        <td style="border: none;"><button value="deletar">Remover Produto</button></td>
+                        <td style="border: none;" class="icon"><i class="fa fa-trash" aria-hidden="true"></i></td>
                       </tr>
                     {%endfor%} 
                   </table>
