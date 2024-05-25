@@ -1,0 +1,6 @@
+{% block content %}
+    {% include 'index.html' %}
+    {% for produto in data %}
+        <h1>{{produto}}</h1>
+    {%endfor%}
+{% endblock content %}

@@ -10,20 +10,16 @@
     <div class="main-container">
         <div class="pagina-container">
             <div class="logo-empresa">Logo Empresa
-                <div class="button-1">
-                    <button class="logo-empresa-button">Logout</button>
-                    <button class="logo-empresa-button">Histórico de Compras</button>
-                </div>
             </div>
 
             <div class="header-container">
-                <button class="adicionar-produto-button">Adicionar Produto</button>
+                <button type="button" class="adicionar-produto-button" onclick="window.location.href='{{ url_for('adicionar_produto') }}';">Adicionar Produto</button>
                 <button class="remover-produto-button">Remover Produto</button>
             </div>
 
             <div class="lista-container">
                 <h2 class="lista-produtos">Lista de Produtos</h2>
-                <table class="tabela">
+                <table class="tabela" style="border: none;">
                     <tr>
                       <th>Descrição</th>
                       <th>Valor</th>
@@ -31,55 +27,16 @@
                       <th>Categoria</th>
                       <th>Saldo</th>
                     </tr>
-                    <tr class="esmalte">
-                      <td>Esmalte</td>
-                      <td>R$30,00</td>
-                      <td>Fixa</td>
-                      <td>Beleza</td>
-                      <td>POS</td>
-                    </tr>
-                    <tr class="saia">
-                        <td>Saia</td>
-                        <td>R$70,00</td>
-                        <td>Fixa</td>
-                        <td>Moda</td>
-                        <td>NEG</td>
+                    {%for produto in data%} 
+                      <tr>
+                        <td>{{produto[0]}}</td>
+                        <td>{{produto[1]}}</td>
+                        <td>{{produto[2]}}</td>
+                        <td>{{produto[3]}}</td>
+                        <td>{{produto[4]}}</td>
+                        <td style="border: none;"><button value="deletar">Remover Produto</button></td>
                       </tr>
-                    <tr class="batom">
-                        <td>Batom</td>
-                        <td>R$10,00</td>
-                        <td>Variável</td>
-                        <td>Beleza</td>
-                        <td>POS</td>
-                    </tr>
-                    <tr class="laço">
-                        <td>Laço</td>
-                        <td>R$5,00</td>
-                        <td>Fixa</td>
-                        <td>Moda</td>
-                        <td>POS</td>
-                      </tr>
-                      <tr class="sombreado">
-                        <td>Sombreado</td>
-                        <td>R$25,00</td>
-                        <td>Variável</td>
-                        <td>Beleza</td>
-                        <td>NEG</td>
-                      </tr>
-                      <tr class="delineador">
-                        <td>Delineeador</td>
-                        <td>R$15,00</td>
-                        <td>Fixa</td>
-                        <td>Beleza</td>
-                        <td>POS</td>
-                      </tr>
-                      <tr class="vestido">
-                        <td>Vestido</td>
-                        <td>R$100,00</td>
-                        <td>Variável</td>
-                        <td>Moda</td>
-                        <td>NEG</td>
-                      </tr>
+                    {%endfor%} 
                   </table>
             </div>
         </div>
