@@ -74,15 +74,18 @@ body{
     width: 150px;
 }
 
-.tabela .icon{
-    width: 50px;
+
+.tabela .ButtonDelete{
     cursor: pointer;
     font-size: 20px;
-    color: #000000;
+    background-color: #8a2be2;
+    color: #fff;
     transition: .6s;
+    text-align: center;
 }
-.tabela .icon:hover{
-    color: rgb(255, 49, 49);
+.tabela .ButtonDelete:hover{
+    color: #fff;
+    background-color: rgb(255, 49, 49);
 }
 
 .esmalte, .batom, .laço, .delineador{
