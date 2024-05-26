@@ -36,7 +36,7 @@ def remover_produto():
             cursor = conn.cursor()
             cursor.execute("DELETE FROM PRODUTOS WHERE nome_produto = ?", (nome_produto,))
             conn.commit()
-        return redirect(url_for('remover_produto'))
+        return redirect(url_for('home'))
 
 ###### CÓDIGO LUIS
     connect = sqlite3.connect('database.db') 

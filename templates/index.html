@@ -35,7 +35,13 @@
                         <td>{{produto[2]}}</td>
                         <td>{{produto[3]}}</td>
                         <td>{{produto[4]}}</td>
-                        <td style="border: none;" class="icon"><i class="fa fa-trash" aria-hidden="true"></i></td>
+                        <td style="border: none;" class="icon">
+                          <!-- Botão para remover produto -->
+                          <form action="/remover_produto" method="post" class="DeleteForm">
+                              <input type="hidden" name="nome_produto" value="{{ produto[0] }}">
+                              <button type="submit"class="ButtonDelete"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                          </form>
+                      </td>
                       </tr>
                     {%endfor%} 
                   </table>
@@ -46,3 +52,4 @@
     </div>
 </body>
 </html>
+
