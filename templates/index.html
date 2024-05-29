@@ -22,7 +22,7 @@
                 <table class="tabela" style="border: none;">
                     <tr>
                       <th>Descrição</th>
-                      <th>Valor</th>
+                      <th>Valor (R$)</th>
                       <th>Tipo de despesa</th>
                       <th>Categoria</th>
                       <th>Saldo</th>
@@ -30,7 +30,7 @@
                     {%for produto in data%} 
                       <tr>
                         <td>{{produto[0]}}</td>
-                        <td>{{produto[1]}}</td>
+                        <td>{{'%0.2f'|format(produto[1]|float)}}</td>
                         <td>{{produto[2]}}</td>
                         <td>{{produto[3]}}</td>
                         <td>{{produto[4]}}</td>
