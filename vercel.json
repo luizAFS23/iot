@@ -1,0 +1,15 @@
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "*.py",
+            "use": "@luizafs23/iot"
+        }
+    ],
+    "routes": [
+        {
+            "src": "(.*)",
+            "dest": "app.py"
+        }
+    ]
+  }
