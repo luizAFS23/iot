@@ -45,6 +45,22 @@ def remover_produto():
     return render_template('remover_produto.html', data=data)
 
     
+@app.route('/editar_produto')
+def editar_produto():
+    if request.method == 'POST':
+        nome_produto = request.form['nome_produto']
+        with sqlite3.connect("database.db") as conn:
+            cursor = conn.cursor()
+            cursor.execute("DELETE FROM PRODUTOS WHERE nome_produto = ?", (nome_produto,))
+            conn.commit()
+        return redirect(url_for('home'))
+    
+    connect = sqlite3.connect('database.db') 
+    cursor = connect.cursor() 
+    cursor.execute('SELECT * FROM PRODUTOS') 
+    data = cursor.fetchall()
+    return render_template("editar_produto.html", data=data)
+
 
 @app.route("/")
 def home():

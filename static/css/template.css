@@ -1,11 +1,11 @@
 body{
     margin: 0;
-    
     padding: 0;
     box-sizing: border-box;
     background-image: url(imgs/pexels-mikhail-nilov-6835879.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .header-container{
@@ -78,7 +78,6 @@ body{
 
 .tabela .ButtonDelete{
     cursor: pointer;
-    font-size: 20px;
     background-color: #8a2be2;
     color: #fff;
     transition: .6s;
@@ -113,7 +112,6 @@ button:hover {
 }
 
 .adicionar_produto_form{
-    max-width: fit-content;
     margin: 60px auto 0;
     flex-direction: column;
     text-align: center;
@@ -122,4 +120,51 @@ button:hover {
     padding: 25px;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8);
+    width: 800px;
+    height: 500px;
+}
+
+.label_adicionar_produto{
+    font-size: 50px;
+}
+
+.form_div{
+    margin-top: 35px;
+    font-size: 25px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: -20px;
+}
+
+.input_adicionar{
+    width: 230px;
+    margin:0px auto;
+
+}
+
+
+.input_button {
+    background-color: #8a2be2; /* roxo médio */
+    color: white;
+    border: none;
+    height: 100%;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 10px;
+    transition: background-color 0.3s ease;
+    width: 110px;
+  }
+  
+.input_button:hover {
+    background-color: #6a1b9a; /* roxo mais escuro no hover */
+}
+
+.label_form{
+    font-size: 20px;
+}
+
+.icon{
+    display: flex;
 }
