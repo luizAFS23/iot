@@ -40,11 +40,6 @@
                               <input type="hidden" name="nome_produto" value="{{ produto[0] }}">
                               <button type="submit"class="ButtonDelete" style="height:100%;width:90%"><i class="fa fa-trash" style="font-size: 1em;" aria-hidden="true"></i></button>
                           </form>
-                          <!-- Botão para editar produto -->
-                          <form action="/editar_produto" method="post" class="EditForm">
-                            <input type="hidden" name="nome_produto" value="{{ produto[0] }}">
-                            <button type="submit"class="ButtonEdit" style="height:100%;width:90%"><i class="fa fa-pencil-square-o" style="font-size: 1em;" aria-hidden="true"></i></button>
-                        </form>
                       </td>
                       </tr>
                     {%endfor%} 
